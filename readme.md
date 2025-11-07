@@ -1177,7 +1177,7 @@ flowchart LR
         C --> C1[Date: Oct 08, 2025<br/>→ 2024-10-08]
         C --> C2[URL: /article/123<br/>→ https://...123]
         C --> C3[Text: Extra spaces<br/>→ Cleaned text]
-        C --> C4[Practice: "Corporate<br/>+ M&A → Corporate | M&A"]
+        C --> C4[Practice: "Corporate<br/>+ M&A → Corporate; M&A"]
     end
     
     C1 & C2 & C3 & C4 --> D
