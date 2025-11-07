@@ -145,14 +145,14 @@ graph LR
 
 | Law Firm | Scraper Type | Content Types | Date Range | Articles/Month |
 |----------|-------------|---------------|------------|----------------|
-| **AZB & Partners** | BeautifulSoup | Articles, Alerts, Updates | All available | ~50-70 |
-| **Cyril Amarchand Mangaldas (CAM)** | BeautifulSoup | Publications, Newsletters, Blogs, Podcasts | Jan 2024 - Dec 2025 | ~80-100 |
-| **Economic Laws Practice (ELP)** | Selenium | Thought Leadership, Articles | Jan 2024 - Dec 2025 | ~40-60 |
-| **IndusLaw** | BeautifulSoup | Publications, Articles | Jan 2024+ | ~30-50 |
-| **Khaitan & Co.** | Selenium + BeautifulSoup | Thought Leadership, News, Blog | Jan 2024+ | ~60-80 |
-| **Lakshmikumaran & Sridharan (LKS)** | BeautifulSoup | Articles, Alerts, Newsletters | Jan 2024 - Dec 2025 | ~70-90 |
-| **Shardul Amarchand Mangaldas (SAM)** | BeautifulSoup | Articles, Alerts, Reports, Research Papers | Jan 2024 - Dec 2025 | ~50-70 |
-| **Trilegal** | Selenium | Knowledge Repository Articles | Jan 2024+ | ~40-50 |
+| **Firm_1** | BeautifulSoup | Articles, Alerts, Updates | All available | ~50-70 |
+| **Firm_2** | BeautifulSoup | Publications, Newsletters, Blogs, Podcasts | Jan 2024 - Dec 2025 | ~80-100 |
+| **Firm_3** | Selenium | Thought Leadership, Articles | Jan 2024 - Dec 2025 | ~40-60 |
+| **Firm_4** | BeautifulSoup | Publications, Articles | Jan 2024+ | ~30-50 |
+| **Firm_5** | Selenium + BeautifulSoup | Thought Leadership, News, Blog | Jan 2024+ | ~60-80 |
+| **Firm_6** | BeautifulSoup | Articles, Alerts, Newsletters | Jan 2024 - Dec 2025 | ~70-90 |
+| **Firm_7** | BeautifulSoup | Articles, Alerts, Reports, Research Papers | Jan 2024 - Dec 2025 | ~50-70 |
+| **Firm_8** | Selenium | Knowledge Repository Articles | Jan 2024+ | ~40-50 |
 
 ### Scraper Complexity Matrix
 
