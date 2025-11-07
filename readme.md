@@ -51,20 +51,20 @@ This project automates the collection of legal publications from 8 major Indian 
 ```mermaid
 graph TB
     subgraph "Web Sources"
-        A1[AZB Partners Website]
-        A2[CAM Website]
-        A3[ELP Website]
-        A4[IndusLaw Website]
-        A5[Khaitan & Co Website]
-        A6[LKS Website]
-        A7[SAM Website]
-        A8[Trilegal Website]
+        A1["<b>Firm_1 Website</b>"]
+        A2["<b>Firm_2 Website</b>"]
+        A3["<b>Firm_3 Website</b>"]
+        A4["<b>Firm_4 Website</b>"]
+        A5["<b>Firm_5 Website</b>"]
+        A6["<b>Firm_6 Website</b>"]
+        A7["<b>Firm_7 Website</b>"]
+        A8["<b>Firm_8 Website</b>"]
     end
 
     subgraph "Scraping Layer"
-        B1[BeautifulSoup Scrapers]
-        B2[Selenium Scrapers]
-        B3[Hybrid Scrapers]
+        B1["<b>BeautifulSoup Scrapers</b>"]
+        B2["<b>Selenium Scrapers</b>"]
+        B3["<b>Hybrid Scrapers</b>"]
     end
 
     subgraph "Data Processing"
@@ -100,17 +100,17 @@ graph TB
     D1 --> E1
     E1 --> E2 & E3 & E4
 
-    style A1 fill:#e1f5ff
-    style A2 fill:#e1f5ff
-    style A3 fill:#e1f5ff
-    style A4 fill:#e1f5ff
-    style A5 fill:#e1f5ff
-    style A6 fill:#e1f5ff
-    style A7 fill:#e1f5ff
-    style A8 fill:#e1f5ff
-    style B1 fill:#fff4e6
-    style B2 fill:#fff4e6
-    style B3 fill:#fff4e6
+    style A1 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style A2 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style A3 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style A4 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style A5 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style A6 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style A7 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style A8 fill:#1e3a5f,stroke:#fff,stroke-width:2px,color:#fff
+    style B1 fill:#2d5016,stroke:#fff,stroke-width:2px,color:#fff
+    style B2 fill:#2d5016,stroke:#fff,stroke-width:2px,color:#fff
+    style B3 fill:#2d5016,stroke:#fff,stroke-width:2px,color:#fff
     style D1 fill:#e8f5e9
     style E1 fill:#f3e5f5
     style E2 fill:#f3e5f5
@@ -166,11 +166,11 @@ graph TD
         E[Very Complex - Hybrid + Deep Scraping]
     end
 
-    A --> F[IndusLaw]
-    B --> G[AZB Partners]
-    C --> H[CAM<br/>LKS]
-    D --> I[ELP<br/>Trilegal<br/>SAM]
-    E --> J[Khaitan & Co.]
+    A --> F[Firm_4]
+    B --> G[Firm_1]
+    C --> H[Firm_2<br/>Firm_6]
+    D --> I[Firm_3<br/>Firm_8<br/>Firm_7]
+    E --> J[Firm_5]
 
     style A fill:#4CAF50
     style B fill:#8BC34A
@@ -199,14 +199,14 @@ graph TD
 - **Timestamp tracking**: Records when data was scraped
 - **Indexed fields**: Optimized queries on date, type, and practice area
 - **Error handling**: Robust exception management and logging
-- **Progressive saving**: Real-time data commits (SAM, Khaitan)
+- **Progressive saving**: Real-time data commits (Firm_7, Firm_5)
 
 ### Technical Features
 
 - **Headless browser support**: Selenium runs without GUI
 - **User-agent rotation**: Mimics real browser behavior
 - **Cookie handling**: Manages consent popups automatically
-- **Dynamic scrolling**: Loads lazy-loaded content (ELP, Khaitan)
+- **Dynamic scrolling**: Loads lazy-loaded content (Firm_3, Firm_5)
 - **Progress tracking**: Real-time console output with statistics
 - **Fallback mechanisms**: Multiple selector strategies for robustness
 
@@ -383,7 +383,7 @@ CREATE TABLE {firm_name}_publications (
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
 | `id` | INT | Auto-incrementing primary key | 1, 2, 3... |
-| `company_name` | VARCHAR(255) | Law firm name | "AZB Partners", "CAM" |
+| `company_name` | VARCHAR(255) | Law firm name | "Firm_1", "Firm_2" |
 | `publication_type` | VARCHAR(255) | Type of content | "Article", "Newsletter", "Blog" |
 | `publication_date` | DATE | Date of publication | 2024-10-15 |
 | `practice_area` | VARCHAR(255) | Legal practice area(s) | "Corporate Law", "Tax" |
@@ -395,14 +395,14 @@ CREATE TABLE {firm_name}_publications (
 
 ```mermaid
 graph TB
-    A[(publications_db)] --> B[azb_partners_publications]
-    A --> C[cam_publications]
-    A --> D[elp_publications]
-    A --> E[publications<br/>IndusLaw]
-    A --> F[Khaitan&Co_Publications]
-    A --> G[lks_publications]
-    A --> H[SAM_publications]
-    A --> I[trilegal_publications]
+    A[(publications_db)] --> B[firm_1_publications]
+    A --> C[firm_2_publications]
+    A --> D[firm_3_publications]
+    A --> E[firm_4_publications]
+    A --> F[firm_5_publications]
+    A --> G[firm_6_publications]
+    A --> H[firm_7_publications]
+    A --> I[firm_8_publications]
     
     B & C & D & E & F & G & H & I --> J[Unified View:<br/>all_publications]
     
@@ -416,21 +416,21 @@ To analyze across all firms:
 
 ```sql
 CREATE VIEW all_publications AS
-SELECT 'AZB Partners' as source, * FROM azb_partners_publications
+SELECT 'Firm_1' as source, * FROM firm_1_publications
 UNION ALL
-SELECT 'CAM' as source, * FROM cam_publications
+SELECT 'Firm_2' as source, * FROM firm_2_publications
 UNION ALL
-SELECT 'ELP' as source, * FROM elp_publications
+SELECT 'Firm_3' as source, * FROM firm_3_publications
 UNION ALL
-SELECT 'IndusLaw' as source, * FROM publications
+SELECT 'Firm_4' as source, * FROM firm_4_publications
 UNION ALL
-SELECT 'Khaitan & Co' as source, * FROM `Khaitan&Co_Publications`
+SELECT 'Firm_5' as source, * FROM firm_5_publications
 UNION ALL
-SELECT 'LKS' as source, * FROM lks_publications
+SELECT 'Firm_6' as source, * FROM firm_6_publications
 UNION ALL
-SELECT 'SAM' as source, * FROM SAM_publications
+SELECT 'Firm_7' as source, * FROM firm_7_publications
 UNION ALL
-SELECT 'Trilegal' as source, * FROM trilegal_publications;
+SELECT 'Firm_8' as source, * FROM firm_8_publications;
 ```
 
 ## 📖 Usage
@@ -442,25 +442,25 @@ SELECT 'Trilegal' as source, * FROM trilegal_publications;
 python run_all_scrapers.py
 
 # Run individual scraper
-python azb_partners_publications_scrapper.py
+python firm_1_scraper.py
 ```
 
 ### Running Individual Scrapers
 
 ```bash
 # BeautifulSoup-based scrapers (faster)
-python azb_partners_publications_scrapper.py
-python cam_publication_scrapper.py
-python indus_law_scarpper.py
-python lks_publication_scrapper.py
-python sam_publication_scrapper.py
+python firm_1_scraper.py
+python firm_2_scraper.py
+python firm_4_scraper.py
+python firm_6_scraper.py
+python firm_7_scraper.py
 
 # Selenium-based scrapers (slower but handles dynamic content)
-python elp_publications_scrapper.py
-python trilegal_publications_scrapper.py
+python firm_3_scraper.py
+python firm_8_scraper.py
 
 # Hybrid scraper
-python khaitan_&_co_scrapper.py
+python firm_5_scraper.py
 ```
 
 ### Execution Flow Diagram
@@ -511,25 +511,25 @@ flowchart TD
 ### Customizing Date Ranges
 
 ```python
-# CAM Example - Custom date range
-scraper = CAMScraper(
+# Firm_2 Example - Custom date range
+scraper = Firm2Scraper(
     db_config, 
     start_date="2024-06-01",  # Start from June 2024
     end_date="2024-12-31"      # End at December 2024
 )
 scraper.run_full_scrape()
 
-# IndusLaw Example - Cutoff date
-scraper = PublicationScraper(
+# Firm_4 Example - Cutoff date
+scraper = Firm4Scraper(
     host='localhost',
     user='root',
     password='password',
     database='publications_db',
     cutoff_date='2024-01-01'   # Only articles from this date onwards
 )
-scraper.scrape_induslaw()
+scraper.scrape()
 
-# LKS Example - Date range constants
+# Firm_6 Example - Date range constants
 START_DATE = datetime(2024, 1, 1)
 END_DATE = datetime(2025, 12, 31)
 ```
@@ -537,13 +537,13 @@ END_DATE = datetime(2025, 12, 31)
 ### Pagination Control
 
 ```python
-# AZB - Limit to first 10 pages
+# Firm_1 - Limit to first 10 pages
 scraper.scrape_all(max_pages=10)
 
-# AZB - Scrape all available pages
+# Firm_1 - Scrape all available pages
 scraper.scrape_all(max_pages=None)
 
-# Trilegal - Control pagination and stopping behavior
+# Firm_8 - Control pagination and stopping behavior
 scraper.run(max_pages=5, stop_at_date=True)  # Stop at old dates
 scraper.run(max_pages=10, stop_at_date=False)  # Exactly 10 pages
 ```
@@ -599,20 +599,20 @@ Most Recent Publications:
 ```mermaid
 graph TB
     subgraph "BeautifulSoup Scrapers"
-        B1[AZB Partners<br/>⚡ Fast<br/>📄 Static HTML]
-        B2[CAM<br/>⚡⚡ Moderate<br/>🔀 Multi-source]
-        B3[IndusLaw<br/>⚡ Fast<br/>📄 Single Page]
-        B4[LKS<br/>⚡⚡ Moderate<br/>📚 Multi-category]
-        B5[SAM<br/>⚡⚡ Moderate<br/>🔄 Progressive Save]
+        B1[Firm_1<br/>⚡ Fast<br/>📄 Static HTML]
+        B2[Firm_2<br/>⚡⚡ Moderate<br/>🔀 Multi-source]
+        B3[Firm_4<br/>⚡ Fast<br/>📄 Single Page]
+        B4[Firm_6<br/>⚡⚡ Moderate<br/>📚 Multi-category]
+        B5[Firm_7<br/>⚡⚡ Moderate<br/>🔄 Progressive Save]
     end
 
     subgraph "Selenium Scrapers"
-        S1[ELP<br/>🐌 Slow<br/>🔄 Dynamic Scroll]
-        S2[Trilegal<br/>🐌 Slow<br/>🍪 Cookie Handling]
+        S1[Firm_3<br/>🐌 Slow<br/>🔄 Dynamic Scroll]
+        S2[Firm_8<br/>🐌 Slow<br/>🍪 Cookie Handling]
     end
 
     subgraph "Hybrid Scrapers"
-        H1[Khaitan & Co<br/>🐌🐌 Very Slow<br/>🔍 Deep Scraping<br/>📊 Practice Area Extraction]
+        H1[Firm_5<br/>🐌🐌 Very Slow<br/>🔍 Deep Scraping<br/>📊 Practice Area Extraction]
     end
 
     style B1 fill:#C8E6C9
@@ -625,11 +625,10 @@ graph TB
     style H1 fill:#FFCDD2
 ```
 
-### 1. AZB Partners Scraper
+### 1. Firm_1 Scraper
 
 **Type:** BeautifulSoup (Static HTML)  
 **Complexity:** ⭐⭐☆☆☆  
-**Target:** https://www.azbpartners.com/resource/
 
 **Key Features:**
 - Handles paginated resource listings
@@ -663,16 +662,16 @@ flowchart LR
 **Data Extracted:**
 ```python
 {
-    'company_name': 'AZB Partners',
+    'company_name': 'Firm_1',
     'publication_type': 'Article',
     'publication_date': '2024-10-15',
     'practice_area': 'Corporate Law',
     'article_heading': 'New SEBI Guidelines on Mutual Funds...',
-    'article_link': 'https://www.azbpartners.com/resource/article-123'
+    'article_link': 'https://...'
 }
 ```
 
-### 2. CAM (Cyril Amarchand Mangaldas) Scraper
+### 2. Firm_2 Scraper
 
 **Type:** BeautifulSoup (Multiple sources)  
 **Complexity:** ⭐⭐⭐☆☆  
@@ -680,7 +679,7 @@ flowchart LR
 **Multi-Source Architecture:**
 ```mermaid
 graph TB
-    A[CAM Scraper] --> B[Publications Page]
+    A[Firm_2 Scraper] --> B[Publications Page]
     A --> C[Newsletters Page]
     A --> D[Podcasts Page]
     A --> E[Blog Networks]
@@ -696,12 +695,6 @@ graph TB
     style A fill:#4CAF50
     style F fill:#2196F3
 ```
-
-**Targets:**
-- Publications: https://www.cyrilshroff.com/campublication/
-- Newsletters: https://www.cyrilshroff.com/newsletters/
-- Podcasts: https://www.cyrilshroff.com/podcasts/
-- Blogs: 5 separate subdomains (disputeresolution, corporate, privateclient, tax, competition)
 
 **Key Features:**
 - Multi-source scraping across 8 different URLs
@@ -719,13 +712,12 @@ if date_obj < self.start_date:
     break
 ```
 
-### 3. ELP (Economic Laws Practice) Scraper
+### 3. Firm_3 Scraper
 
 **Type:** Selenium (Dynamic content)  
 **Complexity:** ⭐⭐⭐⭐☆  
-**Target:** https://elplaw.in/thought-leadership/
 
-**Why Selenium?** ELP's website loads articles dynamically via JavaScript as you scroll, making BeautifulSoup insufficient.
+**Why Selenium?** The website loads articles dynamically via JavaScript as you scroll, making BeautifulSoup insufficient.
 
 **Scrolling Strategy:**
 ```mermaid
@@ -765,11 +757,10 @@ def scroll_and_load(self, num_scrolls=50, delay=10):
         time.sleep(delay)
 ```
 
-### 4. IndusLaw Scraper
+### 4. Firm_4 Scraper
 
 **Type:** BeautifulSoup (Static HTML)  
 **Complexity:** ⭐⭐☆☆☆  
-**Target:** https://induslaw.com/publication
 
 **Key Features:**
 - Single-page scraper (all content on one page)
@@ -799,7 +790,7 @@ flowchart LR
     style I fill:#FF9800
 ```
 
-### 5. Khaitan & Co. Scraper
+### 5. Firm_5 Scraper
 
 **Type:** Selenium + BeautifulSoup (Hybrid)  
 **Complexity:** ⭐⭐⭐⭐⭐ (Most Complex)  
@@ -813,7 +804,7 @@ flowchart LR
 **Three-Tier Architecture:**
 ```mermaid
 graph TB
-    A[Khaitan Scraper] --> B[Thought Leadership]
+    A[Firm_5 Scraper] --> B[Thought Leadership]
     A --> C[News & Events]
     A --> D[Compass Blog]
     
@@ -888,7 +879,7 @@ articles_blog = scrape_compass_blog()
 save_to_database(articles_blog)  # Save immediately
 ```
 
-### 6. LKS (Lakshmikumaran & Sridharan) Scraper
+### 6. Firm_6 Scraper
 
 **Type:** BeautifulSoup (Multi-category)  
 **Complexity:** ⭐⭐⭐☆☆  
@@ -896,7 +887,7 @@ save_to_database(articles_blog)  # Save immediately
 **Multi-Category Architecture:**
 ```mermaid
 graph TB
-    A[LKS Scraper] --> B[Articles]
+    A[Firm_6 Scraper] --> B[Articles]
     A --> C[Alerts/Updates]
     A --> D[Newsletters]
     
@@ -963,7 +954,7 @@ parse_newsletter_date("Tax Amicus: June 2025") → datetime(2025, 6, 30)
 parse_quarterly_date(...) → datetime(2025, 9, 30)
 ```
 
-### 7. SAM (Shardul Amarchand Mangaldas) Scraper
+### 7. Firm_7 Scraper
 
 **Type:** BeautifulSoup (Category-based)  
 **Complexity:** ⭐⭐⭐⭐☆  
@@ -972,7 +963,7 @@ parse_quarterly_date(...) → datetime(2025, 9, 30)
 **Matrix Scraping Strategy:**
 ```mermaid
 graph TB
-    A[SAM Scraper] --> B[Practice Areas]
+    A[Firm_7 Scraper] --> B[Practice Areas]
     
     B --> P1[General Corporate]
     B --> P2[Private Equity]
@@ -1041,11 +1032,10 @@ for level in range(5):  # Try up to 5 levels
             break
 ```
 
-### 8. Trilegal Scraper
+### 8. Firm_8 Scraper
 
 **Type:** Selenium (Dynamic repository)  
 **Complexity:** ⭐⭐⭐⭐☆  
-**Target:** https://trilegal.com/knowledge-repository/
 
 **Key Features:**
 - Cookie consent handling with multiple selectors
@@ -1380,11 +1370,11 @@ LIMIT 30;
 ```sql
 SELECT 
     practice_area,
-    SUM(CASE WHEN company_name = 'AZB Partners' THEN 1 ELSE 0 END) AS AZB,
-    SUM(CASE WHEN company_name = 'CAM' THEN 1 ELSE 0 END) AS CAM,
-    SUM(CASE WHEN company_name = 'Khaitan & Co' THEN 1 ELSE 0 END) AS Khaitan,
-    SUM(CASE WHEN company_name = 'SAM' THEN 1 ELSE 0 END) AS SAM,
-    SUM(CASE WHEN company_name = 'LKS' THEN 1 ELSE 0 END) AS LKS,
+    SUM(CASE WHEN company_name = 'Firm_1' THEN 1 ELSE 0 END) AS Firm_1,
+    SUM(CASE WHEN company_name = 'Firm_2' THEN 1 ELSE 0 END) AS Firm_2,
+    SUM(CASE WHEN company_name = 'Firm_5' THEN 1 ELSE 0 END) AS Firm_5,
+    SUM(CASE WHEN company_name = 'Firm_7' THEN 1 ELSE 0 END) AS Firm_7,
+    SUM(CASE WHEN company_name = 'Firm_6' THEN 1 ELSE 0 END) AS Firm_6,
     COUNT(*) AS total
 FROM all_publications
 WHERE publication_date >= '2024-01-01'
@@ -1400,14 +1390,14 @@ ORDER BY total DESC;
 
 | Scraper | Avg Time/Page | Articles/Page | Total Time (est) | Memory Usage |
 |---------|---------------|---------------|------------------|--------------|
-| **AZB Partners** | 3-5s | 20-30 | 10-15 min | Low (~50MB) |
-| **CAM** | 4-6s | 15-25 | 25-35 min | Low (~60MB) |
-| **ELP** | 520s (scroll) | 50-80 | 30-40 min | Medium (~150MB) |
-| **IndusLaw** | 5s (single page) | All | 2-3 min | Low (~40MB) |
-| **Khaitan & Co** | 450s + 3s/article | 40-60 | 60-90 min | High (~250MB) |
-| **LKS** | 4-6s | 20-30 | 20-30 min | Low (~70MB) |
-| **SAM** | 3-5s | 10-20 | 30-45 min | Medium (~100MB) |
-| **Trilegal** | 8-10s | 15-25 | 15-25 min | Medium (~120MB) |
+| **Firm_1** | 3-5s | 20-30 | 10-15 min | Low (~50MB) |
+| **Firm_2** | 4-6s | 15-25 | 25-35 min | Low (~60MB) |
+| **Firm_3** | 520s (scroll) | 50-80 | 30-40 min | Medium (~150MB) |
+| **Firm_4** | 5s (single page) | All | 2-3 min | Low (~40MB) |
+| **Firm_5** | 450s + 3s/article | 40-60 | 60-90 min | High (~250MB) |
+| **Firm_6** | 4-6s | 20-30 | 20-30 min | Low (~70MB) |
+| **Firm_7** | 3-5s | 10-20 | 30-45 min | Medium (~100MB) |
+| **Firm_8** | 8-10s | 15-25 | 15-25 min | Medium (~120MB) |
 
 ### Performance Optimization Tips
 
