@@ -1801,14 +1801,14 @@ import time
 from datetime import datetime
 
 scrapers = [
-    'azb_partners_publications_scrapper.py',
-    'cam_publication_scrapper.py',
-    'elp_publications_scrapper.py',
-    'indus_law_scarpper.py',
-    'khaitan_&_co_scrapper.py',
-    'lks_publication_scrapper.py',
-    'sam_publication_scrapper.py',
-    'trilegal_publications_scrapper.py'
+    'firm_1_publications_scrapper.py',
+    'firm_2_publication_scrapper.py',
+    'firm_3_publications_scrapper.py',
+    'firm_4_scrapper.py',
+    'firm_5_scrapper.py',
+    'firm_6_publication_scrapper.py',
+    'firm_7_publication_scrapper.py',
+    'firm_8_publications_scrapper.py'
 ]
 
 print(f"Starting batch scraping at {datetime.now()}")
@@ -2232,10 +2232,10 @@ Most law firms publish 2-4 times per week, so weekly scraping is usually suffici
 ### Q3: Why are some scrapers slower than others?
 
 **A:** Speed depends on:
-- **Selenium scrapers** (ELP, Trilegal, Khaitan): Slower due to browser automation
-- **Dynamic scrolling** (ELP, Khaitan): Must wait for content to load
-- **Individual page visits** (Khaitan): Fetches practice areas from each article
-- **BeautifulSoup scrapers** (AZB, CAM, IndusLaw, LKS, SAM): Faster static parsing
+- **Selenium scrapers** (Firm_3, Firm_8, Firm_5): Slower due to browser automation
+- **Dynamic scrolling** (Firm_3, Firm_5): Must wait for content to load
+- **Individual page visits** (Firm_5): Fetches practice areas from each article
+- **BeautifulSoup scrapers** (Firm_1, Firm_2, Firm_4, Firm_6, Firm_7): Faster static parsing
 
 ### Q4: How much disk space will the database need?
 
