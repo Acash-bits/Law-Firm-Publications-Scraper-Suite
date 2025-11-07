@@ -10,20 +10,21 @@ A comprehensive collection of web scrapers designed to aggregate and analyze pub
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Supported Law Firms](#supported-law-firms)
-- [Features](#features)
-- [Installation](#installation)
-- [Database Schema](#database-schema)
-- [Usage](#usage)
-- [Scraper Details](#scraper-details)
-- [Data Flow](#data-flow)
-- [Data Analysis Opportunities](#data-analysis-opportunities)
-- [Performance Metrics](#performance-metrics)
-- [Contributing](#contributing)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
+- [Overview](#-overview)
+- [Key Benefits](#key-benefits)
+- [Architecture](#️-architecture)
+- [Supported Law Firms](#-supported-law-firms)
+- [Features](#-features)
+- [Installation](#-installation)
+- [Database Schema](#️-database-schema)
+- [Usage](#-usage)
+- [Scraper Details](#-scraper-details)
+- [Data Flow](#-data-flow)
+- [Data Analysis Opportunities](#-data-analysis-opportunities)
+- [Performance Metrics](#-performance-metrics)
+- [Contributing](#-contributing)
+- [Troubleshooting](#️-troubleshooting)
+- [License](#-license)
 
 ## 🎯 Overview
 
