@@ -9,8 +9,8 @@ import time
 # Database configuration
 DB_CONFIG = {
     'host': 'localhost',
-    'user': 'root',
-    'password': '1234',
+    'user': 'your_username',
+    'password': 'your_password',
     'database': 'publications_db'
 }
 

@@ -576,8 +576,8 @@ class KhaitanScraper:
 if __name__ == "__main__":
     db_config = {
         'host': 'localhost',
-        'user': 'root',
-        'password': '1234',
+        'user': 'your_username',
+        'password': 'your_password',
         'port': 3306
     }
     

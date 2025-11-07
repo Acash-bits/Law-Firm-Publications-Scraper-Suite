@@ -337,8 +337,8 @@ if __name__ == "__main__":
     db_config = {
         'host': 'localhost',
         'database': 'publications_db',
-        'user': 'root',
-        'password': '1234'
+        'user': 'your_username',
+        'password': 'your_password'
     }
     
     scraper = SAMScraper(db_config)

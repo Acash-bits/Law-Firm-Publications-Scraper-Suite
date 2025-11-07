@@ -409,8 +409,8 @@ if __name__ == "__main__":
     # Database configuration
     db_config = {
         'host': 'localhost',
-        'user': 'root',
-        'password': '1234',
+        'user': 'your_username',
+        'password': 'your_password',
         'database': 'publications_db'
     }
     

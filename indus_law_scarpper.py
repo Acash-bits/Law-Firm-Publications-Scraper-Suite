@@ -327,8 +327,8 @@ if __name__ == "__main__":
     # Initialize scraper with MySQL credentials
     scraper = PublicationScraper(
         host='localhost',
-        user='root',           # Change to your MySQL username
-        password='1234',           # Change to your MySQL password
+        user='your_username',           # Change to your MySQL username
+        password='your_password',           # Change to your MySQL password
         database='publications_db',
         cutoff_date='2024-01-01'
     )

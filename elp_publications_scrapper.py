@@ -273,8 +273,8 @@ if __name__ == "__main__":
     # Database configuration
     db_config = {
         'host': 'localhost',
-        'user': 'root',      # Change this
-        'password': '1234',  # Change this
+        'user': 'your_username',      # Change this
+        'password': 'your_password',  # Change this
         'database': 'publications_db'
     }
     
