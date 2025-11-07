@@ -222,7 +222,7 @@ graph TD
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/law-firm-publications-scraper.git
+git clone https://github.com/Acash-bits/Law-firm-publications-scraper-suite.git
 cd law-firm-publications-scraper
 ```
 
