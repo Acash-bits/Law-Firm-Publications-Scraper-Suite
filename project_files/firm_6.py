@@ -5,13 +5,17 @@ from datetime import datetime
 import re
 from urllib.parse import urljoin
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Database configuration
 DB_CONFIG = {
-    'host': 'localhost',
-    'user': 'your_username',
-    'password': 'your_password',
-    'database': 'publications_db'
+    'host' : os.getenv('DB_HOST'),
+    'password' : os.getenv('DB_PASSWORD'),  # Replace with your MySQL password
+    'user' : os.getenv('DB_USER'),
+    'port' :  os.getenv('DB_PORT')
 }
 
 # Date range

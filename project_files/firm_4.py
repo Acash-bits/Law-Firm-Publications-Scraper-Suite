@@ -322,14 +322,20 @@ class PublicationScraper:
         except Error as e:
             print(f"Error getting statistics: {e}")
 
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Usage Example
 if __name__ == "__main__":
     # Initialize scraper with MySQL credentials
     scraper = PublicationScraper(
-        host='localhost',
-        user='your_username',           # Change to your MySQL username
-        password='your_password',           # Change to your MySQL password
-        database='publications_db',
+        host = os.getenv('DB_HOST'),
+        password = os.getenv('DB_PASSWORD'),  # Replace with your MySQL password
+        database = os.getenv('DB_NAME'),
+        user = os.getenv('DB_USER'),      # Replace with your MySQL username
         cutoff_date='2024-01-01'
     )
     

@@ -29,7 +29,7 @@ class KhaitanScraper:
                 host=self.db_config['host'],
                 user=self.db_config['user'],
                 password=self.db_config['password'],
-                port=self.db_config.get('port', 3306)
+                port=self.db_config.get('port', os.getenv('DB_PORT'))
             )
             cursor = conn.cursor()
             
@@ -572,13 +572,18 @@ class KhaitanScraper:
         
         print("=" * 60)
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Example usage
 if __name__ == "__main__":
-    db_config = {
-        'host': 'localhost',
-        'user': 'your_username',
-        'password': 'your_password',
-        'port': 3306
+    db_config ={
+        'host' : os.getenv('DB_HOST'),
+        'password' : os.getenv('DB_PASSWORD'),  # Replace with your MySQL password
+        'user' : os.getenv('DB_USER'),
+        'port' :  os.getenv('DB_PORT')
     }
     
     scraper = KhaitanScraper(db_config, use_selenium=True)

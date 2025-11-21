@@ -403,15 +403,19 @@ class TrilegalScraperSelenium:
             # Always close the driver
             self.close_driver()
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Usage Example
 if __name__ == "__main__":
     # Database configuration
     db_config = {
-        'host': 'localhost',
-        'user': 'your_username',
-        'password': 'your_password',
-        'database': 'publications_db'
+        'host' : os.getenv('DB_HOST'),
+        'password' : os.getenv('DB_PASSWORD'),  # Replace with your MySQL password
+        'user' : os.getenv('DB_USER'),
+        'port' :  os.getenv('DB_PORT')
     }
     
     # Create scraper instance (headless=False to see browser, headless=True to hide)

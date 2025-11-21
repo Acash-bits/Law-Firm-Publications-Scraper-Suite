@@ -332,13 +332,17 @@ class SAMScraper:
         
         return total_articles
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 if __name__ == "__main__":
     db_config = {
-        'host': 'localhost',
-        'database': 'publications_db',
-        'user': 'your_username',
-        'password': 'your_password'
+        'host' : os.getenv('DB_HOST'),
+        'password' : os.getenv('DB_PASSWORD'),  # Replace with your MySQL password
+        'user' : os.getenv('DB_USER'),
+        'port' :  os.getenv('DB_PORT')
     }
     
     scraper = SAMScraper(db_config)
