@@ -1,0 +1,125 @@
+MIT License
+
+Copyright (c) 2024 [Acash-bits]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+ADDITIONAL TERMS AND CONDITIONS FOR WEB SCRAPING
+================================================================================
+
+This software is designed for web scraping publicly available data. Users of
+this software must comply with all applicable laws and regulations, including
+but not limited to:
+
+1. COMPLIANCE WITH WEBSITE TERMS OF SERVICE
+   - Users must review and comply with the terms of service of any website
+     they scrape using this software.
+   - Users must respect robots.txt files and crawl-delay directives.
+   - Users must not attempt to bypass security measures or access controls.
+
+2. RATE LIMITING AND RESPECTFUL SCRAPING
+   - Users must implement appropriate rate limiting to avoid overloading
+     target servers.
+   - Users must respect any rate limiting or access restrictions imposed by
+     target websites.
+   - Users should scrape during off-peak hours when possible.
+
+3. DATA USAGE AND PRIVACY
+   - Users must comply with data protection regulations (GDPR, CCPA, etc.).
+   - Users must not use scraped data for purposes prohibited by law.
+   - Users must handle any personal data in accordance with applicable
+     privacy laws and regulations.
+
+4. ATTRIBUTION AND COPYRIGHT
+   - Users must respect copyright and intellectual property rights.
+   - Users must provide appropriate attribution when using scraped data.
+   - Users must not claim ownership of content they do not own.
+
+5. COMMERCIAL USE
+   - Users seeking to use this software or scraped data for commercial
+     purposes must ensure they have appropriate rights and permissions.
+   - Users must obtain necessary licenses or permissions from content owners.
+
+6. DISCLAIMER OF LIABILITY
+   - The authors and contributors of this software are not responsible for
+     any misuse of the software or violation of terms of service by users.
+   - Users assume all risks and liabilities associated with using this
+     software.
+   - The authors make no guarantees about the accuracy, completeness, or
+     legality of any data scraped using this software.
+
+7. INDEMNIFICATION
+   - Users agree to indemnify and hold harmless the authors and contributors
+     from any claims, damages, or liabilities arising from their use of this
+     software.
+
+================================================================================
+RESPONSIBLE USE GUIDELINES
+================================================================================
+
+The authors of this software encourage responsible and ethical web scraping:
+
+✓ DO:
+  - Read and comply with website terms of service
+  - Implement respectful rate limiting
+  - Cache responses to minimize requests
+  - Use official APIs when available
+  - Respect robots.txt and meta robots tags
+  - Identify your scraper with a proper User-Agent
+  - Handle errors gracefully
+  - Monitor your scraping for issues
+
+✗ DON'T:
+  - Scrape websites that explicitly prohibit it
+  - Overwhelm servers with excessive requests
+  - Attempt to bypass access controls or CAPTCHAs
+  - Scrape personal or sensitive data without authorization
+  - Use scraped data in violation of copyright or privacy laws
+  - Misrepresent the source of scraped data
+  - Scrape for malicious purposes
+
+================================================================================
+CONTACT AND REPORTING
+================================================================================
+
+If you discover any security vulnerabilities or have concerns about the use
+of this software, please contact [akashwillstudy@gmail.com].
+
+For questions about appropriate use or licensing, please open an issue on
+the GitHub repository.
+
+================================================================================
+ACKNOWLEDGMENTS
+================================================================================
+
+This project uses several open-source libraries. Please review their
+respective licenses:
+
+- BeautifulSoup4: MIT License
+- Selenium: Apache License 2.0
+- Requests: Apache License 2.0
+- mysql-connector-python: GPL v2 License (with FOSS License Exception)
+- lxml: BSD License
+
+Users must comply with all applicable licenses of dependencies.
+
+================================================================================
+
+Last Updated: November 2024

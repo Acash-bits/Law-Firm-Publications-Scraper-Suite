@@ -1,0 +1,446 @@
+# Law Firm Publications Scraper - .gitignore
+
+# ============================================================================
+# Python
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# Database & Configuration
+# ============================================================================
+
+# Database configuration files (CRITICAL - contains passwords!)
+config.py
+db_config.py
+database_config.py
+credentials.py
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# MySQL dumps
+*.dump
+*.sql.gz
+
+# Environment variables (CRITICAL - contains sensitive data!)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# Configuration files with credentials
+secrets.json
+secrets.yaml
+config.json
+config.yaml
+
+# ============================================================================
+# Logs & Output
+# ============================================================================
+
+# Log files
+*.log
+logs/
+*.log.*
+scraper.log
+scraper_debug.log
+scraper_weekly.log
+error.log
+debug.log
+
+# Output files
+output/
+exports/
+data_exports/
+*.csv
+*.json
+*.xlsx
+*.xls
+
+# Exception: Keep example/template files
+!example_output.csv
+!sample_data.json
+
+# ============================================================================
+# Selenium & Browser Drivers
+# ============================================================================
+
+# ChromeDriver
+chromedriver
+chromedriver.exe
+chromedriver_*
+
+# GeckoDriver (Firefox)
+geckodriver
+geckodriver.exe
+
+# Other drivers
+*.exe
+msedgedriver
+operadriver
+
+# Selenium logs
+selenium.log
+selenium-server.log
+ghostdriver.log
+
+# Browser cache/temp
+.cache/
+tmp/
+temp/
+
+# ============================================================================
+# IDE & Editors
+# ============================================================================
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# Eclipse
+.project
+.pydevproject
+.settings/
+
+# Atom
+.atom/
+
+# ============================================================================
+# Operating System
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+
+# Scraped data (large files)
+scraped_data/
+raw_data/
+backup_data/
+
+# Statistics and reports
+reports/
+statistics/
+analytics/
+
+# Test outputs
+test_output/
+test_results/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*_backup
+*_old
+
+# Temporary files
+*.tmp
+temp_*
+tmp_*
+
+# Screenshots (optional - uncomment if you don't want to track)
+# screenshots/
+# *.png
+# *.jpg
+# *.jpeg
+
+# Videos/Recordings
+*.mp4
+*.avi
+*.mov
+
+# Large model files (if any)
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# ============================================================================
+# Archive & Compressed Files (optional)
+# ============================================================================
+
+# Uncomment these if you don't want to track archives
+# *.zip
+# *.tar.gz
+# *.tgz
+# *.rar
+# *.7z
+
+# ============================================================================
+# Documentation Build
+# ============================================================================
+
+# Sphinx
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# MkDocs
+site/
+
+# ============================================================================
+# Keep These Files (Exceptions)
+# ============================================================================
+
+# Keep template/example files
+!config_template.py
+!.env.example
+!example_*.py
+!sample_*.sql
+
+# Keep documentation assets
+!docs/images/*.png
+!docs/diagrams/*.png
+!README_assets/
+
+# Keep requirements files
+!requirements.txt
+!requirements-dev.txt
+
+# Keep CI/CD configs
+!.github/
+!.gitlab-ci.yml
+!.travis.yml
+
+# ============================================================================
+# Notes
+# ============================================================================
+
+# This .gitignore is configured for the Law Firm Publications Scraper Suite project
+# 
+# CRITICAL FILES TO NEVER COMMIT:
+# - config.py (contains database passwords)
+# - .env files (contains environment variables)
+# - *.log files (may contain sensitive data)
+# - Any file with actual database credentials
+# 
+# Before your first commit:
+# 1. Copy config_template.py to config.py and fill in your details
+# 2. Add config.py to .gitignore (already done above)
+# 3. Never use 'git add .' without checking what files are staged
+# 4. Use 'git status' to verify what will be committed
+# 
+# To check if sensitive files are tracked:
+# git ls-files | grep -E "(config\.py|\.env|password)"
+# 
+# To remove accidentally committed sensitive file:
+# git rm --cached config.py
+# git commit -m "Remove sensitive config file"
+# git push
