@@ -8,19 +8,12 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from datetime import datetime
 from bs4 import BeautifulSoup
 import re
+import os
+from dotenv import load_dotenv
 
 class ELPScraper:
     def __init__(self, db_config):
-        """
-        Initialize the scraper with database configuration
-        
-        db_config = {
-            'host': 'localhost',
-            'user': 'your_username',
-            'password': 'your_password',
-            'database': 'publications_db'
-        }
-        """
+    
         self.db_config = db_config
         self.company_name = "ELP"
         self.url = "https://elplaw.in/thought-leadership/"
@@ -267,15 +260,16 @@ class ELPScraper:
                 self.driver.quit()
             print("\n🧹 Cleanup completed")
 
+load_dotenv()
 
 # Usage Example
 if __name__ == "__main__":
     # Database configuration
     db_config = {
-        'host': 'localhost',
-        'user': 'your_username',      # Change this
-        'password': 'your_password',  # Change this
-        'database': 'publications_db'
+        'host': os.getenv('DB_HOST'),
+        'user': os.getenv('DB_USER'),      # Replace with your MySQL username
+        'password': os.getenv('DB_PASSWORD'),  # Replace with your MySQL password
+        'database': os.getenv('DB_NAME')
     }
     
     # Create and run scraper
