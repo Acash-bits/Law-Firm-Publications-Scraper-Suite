@@ -5,6 +5,8 @@ from datetime import datetime
 import time
 from urllib.parse import urljoin
 import re
+import os
+from dotenv import load_dotenv
 
 class CAMScraper:
     def __init__(self, db_config, start_date="2024-01-01", end_date="2025-12-31"):
@@ -430,15 +432,18 @@ class CAMScraper:
         print(f"Total articles filtered (outside date range): {self.articles_filtered}")
         print(f"Total articles processed: {self.articles_scraped + self.articles_filtered}")
 
+load_dotenv()
 
 # Usage Example
 if __name__ == "__main__":
     # Configure your database connection
+
+    # Database configuration
     db_config = {
-        'host': 'localhost',
-        'user': 'your_username',
-        'password': 'your_password',
-        'database': 'publications_db'
+        'host': os.getenv('DB_HOST'),
+        'user': os.getenv('DB_USER'),      # Replace with your MySQL username
+        'password': os.getenv('DB_PASSWORD'),  # Replace with your MySQL password
+        'database': os.getenv('DB_NAME')
     }
     
     # Create scraper instance with date range (Jan 1, 2024 to Dec 31, 2025)
